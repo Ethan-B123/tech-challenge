@@ -1,0 +1,15 @@
+.column-root {
+	width: calc(25% - 20px);
+	padding: 10px;
+	box-sizing: border-box;
+}
+.column-root > h1 {
+	text-align: center;
+}
+.column-root > button,
+.column-root > input {
+	display: block;
+	width: 150px;
+	margin: auto;
+	margin-bottom: 5px;
+}

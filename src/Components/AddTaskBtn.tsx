@@ -15,6 +15,10 @@ export const AddTaskBtn: React.FC<AddTaskBtnProps> = ({ column }) => {
 			<button
 				onClick={() => {
 					if (showTextInput) {
+						if (textValue === '') {
+							setShowTextInput(false);
+							return;
+						}
 						dispatch(
 							addTask({
 								task: {

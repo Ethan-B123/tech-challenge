@@ -4,13 +4,15 @@ import { AppState } from '../Redux/store';
 import { useSelector } from 'react-redux';
 import { Task } from '../Redux/task';
 import { ColumnItem } from './ColumnItem';
+import './Column.css';
 
 interface ColumnProps {
 	header: string;
 	id: number;
+	color: string;
 }
 
-export const Column: React.FC<ColumnProps> = ({ header, id }) => {
+export const Column: React.FC<ColumnProps> = ({ header, id, color }) => {
 	const taskState = useSelector((state: AppState) => state.task);
 	const columnTasks = Object.values(taskState).filter(el => {
 		if (typeof el === 'number') return false;
@@ -20,7 +22,7 @@ export const Column: React.FC<ColumnProps> = ({ header, id }) => {
 		return true;
 	}) as Task[];
 	return (
-		<div>
+		<div className="column-root" style={{ backgroundColor: color }}>
 			<h1>{header}</h1>
 			<AddTaskBtn column={id} />
 			{columnTasks.map(task => (

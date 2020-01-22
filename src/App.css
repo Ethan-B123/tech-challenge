@@ -1,0 +1,7 @@
+.app-root {
+	display: flex;
+	min-height: 100vh;
+	justify-content: space-between;
+	padding: 20px;
+	box-sizing: border-box;
+}

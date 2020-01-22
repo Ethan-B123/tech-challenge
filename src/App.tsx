@@ -7,16 +7,15 @@ import { setColumnRange } from './Redux/task';
 const App: React.FC = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
-		dispatch(setColumnRange({ range: [0, 4] }));
+		dispatch(setColumnRange({ range: [0, 3] }));
 	}, []);
 
 	return (
-		<div>
-			<Column id={0} header="title0" />
-			<Column id={1} header="title1" />
-			<Column id={2} header="title2" />
-			<Column id={3} header="title2" />
-			<Column id={4} header="title2" />
+		<div className="app-root">
+			<Column id={0} header="Backlog" color="#ff4444" />
+			<Column id={1} header="To Do" color="#4444ff" />
+			<Column id={2} header="In Progress" color="#44ffff" />
+			<Column id={3} header="Completed" color="#44ff44" />
 		</div>
 	);
 };
