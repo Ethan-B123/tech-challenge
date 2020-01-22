@@ -1,0 +1,23 @@
+.column-item-root {
+	position: relative;
+	background-color: #cccccc;
+	margin: auto;
+  margin-bottom: 10px;
+  padding: 0 25px
+}
+
+.column-item-btn-left {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.column-item-btn-right {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}

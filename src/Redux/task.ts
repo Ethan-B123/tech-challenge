@@ -21,8 +21,23 @@ type TaskState = {
 export const TaskSlice = createSlice({
 	name: 'task',
 	initialState: {
-		maxId: 0,
-		columnRange: [0, 2]
+		maxId: 2,
+		columnRange: [0, 2],
+		[0]: {
+			title: 'work on app',
+			column: 3,
+			id: 0
+		},
+		[1]: {
+			title: 'interview',
+			column: 1,
+			id: 1
+		},
+		[2]: {
+			title: 'Hope you enjoy!',
+			column: 2,
+			id: 2
+		}
 	} as TaskState,
 	reducers: {
 		addTask: (state, action: PayloadAction<{ task: TaskNoId }>) => {
